@@ -1,9 +1,34 @@
+import { Route, Switch, Redirect } from "react-router-dom";
+import MainHeader from "./components/MainHeader";
+import Welcome from "./Pages/Welcome";
+import Products from "./Pages/Products";
+import ProductDetail from "./Pages/ProductDetail";
+
 function App() {
   return (
     <div>
-      <h2>Let's get started!</h2>
+      <MainHeader />
+      <main>
+        <Switch>
+          <Route path="/" exact>
+            <Redirect to="/welcome" />
+          </Route>
+          <Route path="/welcome">
+            <Welcome />
+          </Route>
+          <Route path="/products" exact>
+            <Products />
+          </Route>
+          <Route path="/products/:productId">
+            <ProductDetail />
+          </Route>
+        </Switch>
+      </main>
     </div>
   );
 }
 
 export default App;
+
+//our-domain/welcome
+//our-domain/products
