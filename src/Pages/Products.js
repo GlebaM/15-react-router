@@ -2,7 +2,7 @@ import { Link } from "react-router-dom";
 
 const Products = () => {
   return (
-    <section>
+    <section className="products">
       <h1>The Products Page</h1>
       <ul>
         <li>

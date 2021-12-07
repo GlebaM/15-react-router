@@ -14,7 +14,9 @@ body {
 }
 
 main {
-  margin-top: 7rem;
+  margin: 7rem auto 0;
+  width: 50rem;
+  max-width: 95%;
   text-align: center;
 }
 
@@ -23,4 +25,48 @@ h2,
 h3,
 p {
   color: #042b5f;
+}
+
+.products > ul {
+  padding-inline-start: 0px;
+  list-style: none;
+}
+
+.products a {
+  color: #042b5f;
+  text-decoration: none;
+  transition: all 0.15s ease;
+}
+
+.products a:hover {
+  color: black;
+  letter-spacing: 2px;
+  font-weight: 900;
+  font-size: large;
+}
+.fade {
+  box-sizing: border-box;
+  opacity: 1;
+}
+
+.fade-enter {
+  opacity: 0;
+}
+.fade-enter-active {
+  transition: opacity 500ms;
+  opacity: 1;
+}
+.fade-exit {
+  opacity: 1;
+}
+.fade-exit-active {
+  opacity: 0;
+}
+
+.fade-appear {
+  opacity: 0;
+}
+.fade-appear-active {
+  opacity: 1;
+  transition: opacity 500ms;
 }
